@@ -4,17 +4,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
+    margin: auto;
 }
-.Test{
-    text-align: left;
-}
+
 .container {
     text-align: center;
 }
 #logo {
 
+    margin-top: auto;
     font-size: 150px;
     color: red;
 }
@@ -32,7 +30,7 @@ h1 {
 }
 
 table {
-    width: 70%;
+    width: 50%;
     margin: 10 auto;
     border-collapse: collapse;
 }
