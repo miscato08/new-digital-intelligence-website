@@ -7,6 +7,9 @@ body {
     height: 100vh;
     margin: 0;
 }
+.Test{
+    text-align: left;
+}
 .container {
     text-align: center;
 }
@@ -19,6 +22,7 @@ body {
     font-size: 18px;
     color: black;
 }
+
 a{
     color: black;
 }
@@ -28,8 +32,8 @@ h1 {
 }
 
 table {
-    width: 80%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 10 auto;
     border-collapse: collapse;
 }
 
@@ -59,4 +63,8 @@ img {
 a {
     text-decoration: none;
     color: #0077b5;
+}
+
+p{
+    text-align: center;
 }
