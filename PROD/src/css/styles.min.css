@@ -46,7 +46,9 @@
 }
 
 html {
-    font-size: 16px
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -564,6 +566,12 @@ section {
     border: var(--border-style) var(--rot)
 }
 
+@media (max-width: 1440px) {
+    .leistungs-teaser-box {
+        width: 100%
+    }
+}
+
 @media (max-width: 1366px) {
     .leistungs-teaser-box {
         width: 80%
@@ -639,7 +647,7 @@ section {
 }
 
 #service-bereich {
-    background-color: var(--hell-grau)
+    background-color: var(--weiss)
 }
 
 .service-box {
@@ -711,7 +719,9 @@ section {
 }
 
 #über-uns-container p {
-    margin-top: 0
+    margin-top: 0;
+    display: block;
+    margin-right: 1rem;
 }
 
 #über-uns-container>img {
@@ -719,6 +729,8 @@ section {
     top: 0;
     right: 100px;
     height: 100%;
+    width: 20%;
+    margin-left: 1rem;
 }
 
 #über-uns-container>p {
@@ -853,6 +865,7 @@ section {
     min-width: 170px
 }
 
+
 @media (max-width: 1782px) {
     .leistungs-box {
         flex-basis: 27.5%
@@ -861,6 +874,7 @@ section {
     .leistungs-box-empfohlen {
         flex-basis: 30%
     }
+
 }
 
 @media (max-width: 1622px) {
@@ -932,6 +946,72 @@ section {
         padding: .5rem 1rem 2rem 1rem
     }
 }
+
+@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1136px) and (max-width: 1280px) {
+    
+}
+
+/*Team*/ 
+
+#team{
+    background-color: var(--hell-grau);
+}
+
+.cards{
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 2em; 
+
+}
+
+.member{
+    width: 450px;
+    height: 200px;
+    background-color: #3D3F45;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-columns: 0.1fr 1fr 2fr; 
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+    'left header header'
+    'left picture main'
+    'left footer footer';
+
+}
+
+.main{
+    grid-area: main;
+    display: block;
+    margin-left: 10px;
+}
+
+.picture{
+    grid-area: picture;
+}
+
+#position{
+    display: inline ;
+}
+.picture img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+}
+.main img{
+    transform: scale(0.75);
+}
+
+#name{
+    font-weight: bolder; 
+}
+/*end of Team content*/
+
 
 #kontakt-bereich {
     padding-top: 1rem
