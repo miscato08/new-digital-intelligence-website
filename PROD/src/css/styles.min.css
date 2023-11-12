@@ -32,7 +32,7 @@
 
 :root {
     --blau: #1F4E8C;
-    --dunkel-grau: #3D3F45;
+    --dunkel-grau: #7D7C7C;
     --hell-grau: #F0F0F0;
     --rot: #A62C21;
     --weiss: #FFF;
@@ -46,7 +46,9 @@
 }
 
 html {
-    font-size: 16px
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -107,7 +109,17 @@ section {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
+    color: black;
+}
+
+#intro-container-video {
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
 }
 
 .intro-container>h1 {
@@ -486,7 +498,7 @@ section {
 #animiertes-logo {
     height: 150px;
     width: 150px;
-    background-color: var(--dunkel-grau);
+    background-color: var(--hell-grau);
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -562,6 +574,12 @@ section {
 .leistung-ansehen-btn:hover {
     color: var(--rot);
     border: var(--border-style) var(--rot)
+}
+
+@media (max-width: 1440px) {
+    .leistungs-teaser-box {
+        width: 100%
+    }
 }
 
 @media (max-width: 1366px) {
@@ -644,7 +662,14 @@ section {
 
 .service-box {
     text-align: center;
-    width: 80%
+    width: 80%;
+    margin: auto    
+} 
+
+#service-box-special{
+    text-align: center;
+    width: 80%;
+    margin: auto
 }
 
 .service-box h1 {
@@ -661,30 +686,74 @@ section {
     margin-right: auto
 }
 
+/*Icons Section*/
+
 .service-icon {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    transition: transform 1s
+    transition: transform 1s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.service-box > p {
+    color: black;
+}
+
+#service-box-special{
+    color: black;
 }
 
 .service-icon:hover {
     transform: rotateZ(360deg)
 }
 
-#guenstig-icon {
-    background: var(--dunkel-grau) url(../img/services-sprite.png) left 0 top 0
+/*Define Icons Row 1*/
+#fast_growing_icon {
+    background-image: url(../icons/icon_1.png);
 }
 
-#schnell-icon {
-    background: var(--dunkel-grau) url(../img/services-sprite.png) left -120px top 0
+#interaction_icon {
+    background-image: url(../icons/icon_2.png);
 }
 
-#modern-icon {
-    background: var(--dunkel-grau) url(../img/services-sprite.png) left -240px top 0
+#employees_icon {
+    background-image: url(../icons/icon_3.png);
 }
+
+
+/*Define Icons Row 2*/
+#business_case_icon {
+    background-image: url(../icons/icon_4.png);
+}
+
+#paying_icon {
+    background-image: url(../icons/icon_5.png);
+}
+
+#speed_icon {
+    background-image: url(../icons/icon_6.png);
+}
+
+
+/*Define Icons Row 3*/
+#client_facing_icon {
+    background-image: url(../icons/icon_7.png);
+}
+
+#conversation_icon {
+    background-image: url(../icons/icon_8.png);
+}
+
+#risk_free_icon {
+    background-image: url(../icons/icon_9.png);
+}
+/*End of Icon defining*/
 
 @media (max-width: 768px) {
     #service-bereich>.container>.row:nth-of-type(2)>.col-2>.service-box {
@@ -711,7 +780,9 @@ section {
 }
 
 #über-uns-container p {
-    margin-top: 0
+    margin-top: 0;
+    display: block;
+    margin-right: 1rem;
 }
 
 #über-uns-container>img {
@@ -719,6 +790,8 @@ section {
     top: 0;
     right: 100px;
     height: 100%;
+    width: 20%;
+    margin-left: 1rem;
 }
 
 #über-uns-container>p {
@@ -754,10 +827,19 @@ section {
     }
 }
 
+/*Footer*/
+#footer-imprint {
+    background-color: var(--dunkel-grau);
+    color: var(--weiss);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 #footer {
     background-color: var(--dunkel-grau);
-    height: 2.8rem;
-    color: var(--weiss)
+    color: var(--weiss);
 }
 
 #footer-nav {
@@ -789,6 +871,8 @@ section {
         display: none
     }
 }
+/*End of the footer*/
+
 
 .leistung {
     padding-top: 2rem;
@@ -799,13 +883,14 @@ section {
     background-color: var(--hell-grau)
 }
 
+/*Service Boxes*/
 .flex-container {
     display: flex;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-around;
-    align-items: center
+    align-items: flex-start; /* Align items to the top */
 }
 
 .flex-container>.intro-container {
@@ -814,15 +899,13 @@ section {
 
 .leistungs-box {
     background-color: var(--dunkel-grau);
-    flex-basis: 25%;
     color: var(--weiss);
-    padding: 2rem 4rem;
-    text-align: center;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between
+    padding: 2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    height: 774.72px;
+    width: 343.16px;
 }
 
 .leistungs-box-empfohlen {
@@ -833,11 +916,26 @@ section {
 }
 
 .leistungs-box h1 {
-    margin-bottom: 0
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .leistungs-box ul {
-    padding: 0
+    padding-left: 1rem;
+}
+
+.leistungs-box li {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+}
+
+.leistungs-box li ul {
+    padding-left: 1rem;
+}
+
+.leistungs-box li ul li {
+    list-style-type: circle;
+    margin-bottom: 0.5rem;
 }
 
 .leistungs-box ul>li {
@@ -845,13 +943,6 @@ section {
     margin-bottom: .5rem
 }
 
-.leistung-auswählen-btn {
-    width: 50%;
-    height: 2.5rem;
-    font-size: 1rem;
-    margin-top: .5rem;
-    min-width: 170px
-}
 
 @media (max-width: 1782px) {
     .leistungs-box {
@@ -861,6 +952,7 @@ section {
     .leistungs-box-empfohlen {
         flex-basis: 30%
     }
+
 }
 
 @media (max-width: 1622px) {
@@ -932,6 +1024,12 @@ section {
         padding: .5rem 1rem 2rem 1rem
     }
 }
+
+@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1136px) and (max-width: 1280px) {
+    
+}
+/*End of Service Boxes*/
+
 
 /*Team*/ 
 
@@ -1137,60 +1235,4 @@ section {
     .col-4 {
         width: 100%
     }
-}
-
-
-/*Team*/ 
-.cards{
-    display: flex; 
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 2em; 
-
-}
-
-.member{
-    width: 450px;
-    height: 200px;
-    background-color: #3D3F45;
-    color: white;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr; 
-    grid-template-columns: 0.1fr 1fr 2fr; 
-    justify-content: center;
-    align-items: center;
-    grid-template-areas:
-    'left header header'
-    'left picture main'
-    'left footer footer';
-
-}
-
-.main{
-    grid-area: main;
-    display: block;
-    margin-left: 10px;
-}
-
-.picture{
-    grid-area: picture;
-}
-
-#position{
-    display: inline ;
-}
-.picture img{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-
-}
-.main img{
-    transform: scale(0.75);
-}
-
-#name{
-    font-weight: bolder; 
 }
