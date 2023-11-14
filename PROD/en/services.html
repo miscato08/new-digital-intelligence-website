@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Services</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./src/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./src/img/favicons/safari-pinned-tab.svg" color="#3d3f45">
+    <link rel="shortcut icon" href="./src/img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#3d3f45">
+    <meta name="msapplication-config" content="./src/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.min.css">
+</head>
+
+<body>
+    <nav id="header-nav">
+        <div class="container" id="desktop-nav">
+            <div class="row">
+                <div class="col-6"><a href="index.html" class="logo-link"><img src="./src/img/ndi_ag_logo_groß.png"
+                            alt="Logo von New Digital Intelligence"></a>
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li class="active"><a href="services.html">Services</a></li>
+                        <li><a href="imprint-contact.html">Imprint & Contact</a></li>
+                        <li><button id="language-switcher" class="btn-typ-1">Switch Language</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="mobile-nav">
+            <div class="row">
+                <div class="col-6"><a href="index.html" class="logo-link"><img src="./src/img/ndi_ag_logo_klein.png"
+                            alt="Logo von New Digital Intelligence"></a>
+                    <div class="clearfix" id="mobile-nav-dropdown">
+                        <div id="mobile-nav-button"><span>&equiv;</span></div>
+                        <div class="clearfix" id="mobile-nav-content">
+                            <ul>
+                                <li><a href="index.html">Overview</a></li>
+                                <li class="active"><a href="services.html">Services</a></li>
+                                <li><a href="imprint-contact.html">Imprint & Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header id="header-banner-klein"></header>
+    <section class="leistung" id="leistung1">
+        <div class="flex-container">
+            <header class="intro-container">
+                <h1>Services</h1>
+                <p>This page is to describe the services provided by NDI, outlining the different steps along the value chain (Sales & Marketing, Implementation & Integration, Monitoring & Operations). Across all steps, each client is assigned a dedicated account delivery manager. </p>
+            </header>
+        </div>
+
+        <div class="flex-container">
+            <article class="leistungs-box">
+                <h1>Assessment and Design</h1>
+                <div>
+                    <ul>
+                        <li>Build demos, showcases </li>
+                        <li>Build MVP</li>
+                        <li>Develop Business Case</li>
+                        <li>Develop Implementation Plan</li>
+                        <li>Perform Organizational alignment</li>
+                    </ul>
+            </article>
+            <article class="leistungs-box leistungs-box-empfohlen">
+                <h1>Implementation & Integration</h1>
+                <div>
+                    <ul>
+                        <li>Perform Implementation</li>
+                        <ul>
+                            <li>Compile list of events triggering handover to human agen</li>
+                            <li>Define and implement integration with user data of logged in customer, agree on desired level of hyper personalization</li>
+                            <li>“Hypercare phase”: review of chatbot-client interactions by a live agent at all times</li>
+                        </ul>
+                        <li>Adapt content</li>
+                        <li>Perform Training and Enablement</li>
+                        <ul>
+                            <li>Define chatbot training data (website content, additional product documentation, golden Q&A source, …) and chatbot hyperparameters (temperature, …)</li>
+                        </ul>
+                    </ul>
+            </article>
+            <article class="leistungs-box">
+                <h1>Monitoring & Operations</h1>
+                <div>
+                    <ul>
+                        <li>Provide Monitoring & Reporting</li>
+                        <ul>
+                            <li>Realtime monitoring of chat and voice channels</li>
+                            <li>Non-Realtime monitoring of email channel</li>
+                        </ul>
+
+                        <li>Manage and maintain Content</li>
+                        <ul>
+                            <li>Improve website content (and other supplementary content sources if applicable), by addressing and closing detected content gaps and inconsistencies</li>
+                            <li>Maintain and continuously update “best possible answer” database </li>
+                        </ul>
+
+                        <li>Train and improve Model</li>
+                        <ul>
+                            <li>Collect and evaluate customer feedback</li>
+                            <li>Run sentiment analysis of client-chatbot interactions</li>
+                            <li>Based on customer feedback and sentiment analysis, and in agreement with the client, adjust chatbot settings, human agent handoff events, chatbot hyperparameters, etc.</li>
+                        </ul>
+                        <li>Maintain Technology </li>
+                        <ul>
+                            <li>Patches (Security, other)</li>
+                            <li>Minor Releases</li>
+                            <li>Major Releases (not included in per transaction price)</li>
+                        </ul>
+
+                    </ul>
+            </article>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><span>New Digital Intelligence (2023)</span>
+                    <nav id="footer-nav"><a href="imprint-contact.html">Imprint & Contact</a></nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('language-switcher').addEventListener('click', function() {
+        var currentPath = window.location.pathname;
+        var newPath;
+
+        if (currentPath.startsWith('/en/')) {
+        newPath = currentPath.replace('/en/', '/de/');
+        } else if (currentPath.startsWith('/de/')) {
+      newPath = currentPath.replace('/de/', '/en/');
+        } else {
+      // Default to English if the current language cannot be determined
+      newPath = '/en' + currentPath;
+        }
+
+        window.location.pathname = newPath;
+        });
+    </script>
+
+</body>
+
+</html>
