@@ -197,6 +197,25 @@ section {
     font-weight: 400
 }
 
+.btn-flag {
+    border: none;
+    background: transparent;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-flag-image{
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.btn-flag:hover{
+    border: var(--border-style) var(--weiss);
+    font-weight: 400 
+}
+
 #header-nav {
     width: 100%;
     height: 50px;
