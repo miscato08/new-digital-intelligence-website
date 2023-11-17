@@ -651,6 +651,9 @@ section {
     display: block
 }
 
+
+
+
 @media (max-width: 1440px) {
     #video-bereich video {
         width: 45%
@@ -1255,3 +1258,59 @@ section {
         width: 100%
     }
 }
+
+#technology {
+    background-color: var(--dunkel-grau);
+    color: var(--weiss)
+}
+
+.center-div {
+        margin: auto;
+        text-align: center;
+    }
+
+    #video-bereich {
+        background-color: var(--dunkel-grau);
+        color: var(--weiss)
+    }
+
+    /* Additional styling for better centering */
+    
+    
+    .containerdownloads {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .file-card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #fff;
+    }
+    
+    .file-icon {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .download-button {
+        background-color: #A62C21;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    .download-button:hover {
+        background-color: #45a049;
+    }
