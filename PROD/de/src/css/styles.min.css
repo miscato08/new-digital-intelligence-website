@@ -42,7 +42,7 @@
     --tertiaere-schriftart: Arial;
     --fallback-schriftart: sans-serif;
     --border-style: 2px solid;
-    --border-transition: border .5s ease-in-out
+    --border-transition: border .5s ease-in-out;
 }
 
 html {
@@ -93,7 +93,7 @@ section {
 }
 
 .active {
-    background-color: var(--rot) !important
+    background-color: var(--rot) !important;
 }
 
 .wichtiger-text {
@@ -194,26 +194,62 @@ section {
 
 .btn-typ-3:hover {
     border: var(--border-style) var(--rot);
-    font-weight: 400
+    font-weight: 400;
 }
 
-.btn-flag {
+.btn-typ-4 {
+    background-color: transparent;
+    border: var(--border-style) var(--rot);
+    font-size: 1rem;
+    color: var(--rot);
+    transition: var(--border-transition);
+    height: 25px;
+    width: 245px;
+}
+
+.btn-typ-4:hover {
+    border: var(--border-style) var(--rot);
+    font-weight: 400;
+}
+
+/*Downloads Section*/
+
+.download_article{
+    border: var(--border-style) var(--dunkel-grau);
+    text-align: center;
+    padding: 1rem;
+    height: 325px;
+    width: auto;
+}
+
+.download_article p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#middle {
+    margin-bottom: 5rem !important;
+}
+
+
+/*End of Downloads Section*/
+
+#language-switcher {
     border: none;
     background: transparent;
-    padding: 5px;
     cursor: pointer;
+    color: #fff;
+    margin-top: .8rem;
+    display: block;
     text-align: center;
 }
 
-.btn-flag-image{
-    width: 20px;
-    height: auto;
-    margin-right: 5px;
-}
-
-.btn-flag:hover{
-    border: var(--border-style) var(--weiss);
-    font-weight: 400 
+#en-img{
+    height: 20px;
+    width: auto;
+    float: right;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+    margin-left: 5px;
 }
 
 #header-nav {
@@ -230,7 +266,7 @@ section {
     width: auto;
     margin: .55rem;
     float: left;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0)
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
 }
 
 #header-nav ul {
@@ -247,7 +283,7 @@ section {
 }
 
 #header-nav ul>li>a {
-    margin-top: .8rem;
+    margin-top: .7rem;
     display: inline-block
 }
 
@@ -292,7 +328,7 @@ section {
     font-size: 2rem;
     border: var(--border-style) var(--weiss);
     width: 37px;
-    height: 37px;
+    height: 40px;
     position: relative;
     margin-top: .4rem;
     margin-bottom: .5rem
@@ -388,151 +424,15 @@ section {
     height: 35px
 }
 
-@media (max-width: 1822px) {
-    #nb-email-input {
-        width: 70%
-    }
-}
 
-@media (max-width: 1358px) {
-    #nb-email-input {
-        width: 100%;
-        margin-bottom: .5rem
-    }
-
-    #nb-btn {
-        width: 100%
-    }
-}
-
-@media (max-width: 768px) {
-    #nb-werbetext {
-        display: none
-    }
-
-    #nb-form {
-        margin-top: 0
-    }
-
-    #newsletter-bereich .col-4 {
-        display: none
-    }
-}
-
-@media (max-width: 480px) {
-    #nb-email-input {
-        height: 25px
-    }
-
-    #nb-btn {
-        height: 25px;
-        padding: .1rem
-    }
-}
-
-@-webkit-keyframes logoAnimation {
-    0% {
-        transform: rotateZ(0)
-    }
-
-    11.111% {
-        transform: rotateZ(0)
-    }
-
-    22.222% {
-        transform: rotateZ(90deg)
-    }
-
-    33.333% {
-        transform: rotateZ(90deg)
-    }
-
-    44.444% {
-        transform: rotateZ(180deg)
-    }
-
-    55.555% {
-        transform: rotateZ(180deg)
-    }
-
-    66.666% {
-        transform: rotateZ(270deg)
-    }
-
-    77.777% {
-        transform: rotateZ(270deg)
-    }
-
-    88.888% {
-        transform: rotateZ(360deg)
-    }
-
-    100% {
-        transform: rotateZ(360deg)
-    }
-}
-
-@keyframes logoAnimation {
-    0% {
-        transform: rotateZ(0)
-    }
-
-    11.111% {
-        transform: rotateZ(0)
-    }
-
-    22.222% {
-        transform: rotateZ(90deg)
-    }
-
-    33.333% {
-        transform: rotateZ(90deg)
-    }
-
-    44.444% {
-        transform: rotateZ(180deg)
-    }
-
-    55.555% {
-        transform: rotateZ(180deg)
-    }
-
-    66.666% {
-        transform: rotateZ(270deg)
-    }
-
-    77.777% {
-        transform: rotateZ(270deg)
-    }
-
-    88.888% {
-        transform: rotateZ(360deg)
-    }
-
-    100% {
-        transform: rotateZ(360deg)
-    }
-}
-
-#animiertes-logo {
-    height: 150px;
-    width: 150px;
-    background-color: var(--hell-grau);
-    border-radius: 50%;
+#animiertes-logo>img {
+    display: block;
+    width: 200px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4rem;
     padding: 25px
-}
-
-#animiertes-logo>img {
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-animation: logoAnimation 5s ease-in-out infinite alternate;
-    animation: logoAnimation 5s ease-in-out infinite alternate
 }
 
 @media (max-width: 768px) {
@@ -775,6 +675,35 @@ section {
 #risk_free_icon {
     background-image: url(../icons/icon_9.png);
 }
+
+/*Defining for Downloads Page*/
+
+/* Row 1 */
+#power_point {
+   background-image: url(../icons/power_point.png); 
+}
+
+#brochure_icon {
+   background-image: url(../icons/brochure_icon.png); 
+}
+
+#calculator_icon {
+   background-image: url(../icons/calculator_icon.png);  
+}
+
+/* Row 2 */
+#contract_icon {
+    background-image: url(../icons/contract_icon.png);
+}
+
+#pricing_icon {
+    background-image: url(../icons/pricing_icon.png);
+}
+
+#faq_icon {
+    background-image: url(../icons/faq_icon.png);
+}
+
 /*End of Icon defining*/
 
 @media (max-width: 768px) {
@@ -850,7 +779,7 @@ section {
 }
 
 /*Footer*/
-#footer-imprint {
+.footer-fixed {
     background-color: var(--dunkel-grau);
     color: var(--weiss);
     position: fixed;
@@ -1202,7 +1131,8 @@ section {
 }
 
 .col-2 {
-    width: 33.333%
+    width: 33.333%;
+    align-items: center;
 }
 
 .col-3 {
