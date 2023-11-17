@@ -27,8 +27,12 @@
                         <li><a href="index.html">Homepage</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="imprint-contact.html">Imprint & Contact</a></li>
-                        <li class="active"><a href="team.html">Team</a></li>
-                        <li><button id="language-switcher" class="btn-typ-1">Switch Language</button></li>
+                        <li class="active"><a href="team.html">Team Page</a></li>
+                        <li>
+                            <button id="language-switcher">
+                                <img src="./src/icons/icon-german.png" alt="English Flag" id="en-img"> DE
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -210,21 +214,22 @@
     </footer>
 
     <script>
-        document.getElementById('language-switcher').addEventListener('click', function() {
-        var currentPath = window.location.pathname;
-        var newPath;
+    document.getElementById('language-switcher').addEventListener('click', function() {
+    var currentPath = window.location.pathname;
+    var newPath;
+    var baseUrl = '/test'; // Adjust this to match your actual base URL
 
-        if (currentPath.startsWith('/en/')) {
-        newPath = currentPath.replace('/en/', '/de/');
-        } else if (currentPath.startsWith('/de/')) {
-      newPath = currentPath.replace('/de/', '/en/');
-        } else {
-      // Default to English if the current language cannot be determined
-      newPath = '/en' + currentPath;
-        }
+    if (currentPath.startsWith(baseUrl + '/en/')) {
+    newPath = currentPath.replace(baseUrl + '/en/', baseUrl + '/de/');
+    } else if (currentPath.startsWith(baseUrl + '/de/')) {
+    newPath = currentPath.replace(baseUrl + '/de/', baseUrl + '/en/');
+    } else {
+    // Default to English if the current language cannot be determined
+    newPath = baseUrl + '/en' + currentPath;
+    }
 
-        window.location.pathname = newPath;
-        });
+    window.location.pathname = newPath;
+    });
     </script>
 
 </body>

@@ -22,15 +22,16 @@
         <div class="container" id="desktop-nav">
             <div class="row">
                 <div class="col-6"><a href="index.html" class="logo-link"><img src="./src/img/ndi_ag_logo_groß.png"
-                            alt="Logo von New Digital intelligence made simple"></a>
+                            alt="Logo von New Digital intelligence"></a>
                     <ul>
                         <li class="active"><a href="index.html">Überblick</a></li>
                         <li><a href="services.html">Diensteistungen</a></li>
-                        <li><a href="imprint-contact.html">Impressum & Kontakt</a></li>
-                        <li><a href="team.html">Team</a></li>
+                        <li><a href="imprint-contact.html">Kontakt</a></li>
+                        <li><a href="team.html">Team Seite</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
                         <li>
-                            <button id="language-switcher" class="btn-flag">
-                                <img src="./src/icons/english-icon.jpeg" alt="English Flag" class="btn-flag-image"> EN
+                            <button id="language-switcher">
+                                <img src="./src/icons/english-icon.jpeg" alt="English Flag" id="en-img"> EN
                             </button>
                         </li>
                     </ul>
@@ -47,7 +48,9 @@
                             <ul>
                                 <li class="active"><a href="index.html">Überblick</a></li>
                                 <li><a href="services.html">Diensteistungen</a></li>
-                                <li><a href="imprint-contact.html">Impressum & Kontakt</a></li>
+                                <li><a href="imprint-contact.html">Kontakt</a></li>
+                                <li><a href="team.html">Team Seite</a></li>
+                                <li><a href="downloads.html">Downloads</a></li>
                             </ul>
                         </div>
                     </div>
@@ -57,7 +60,7 @@
     </nav>
 
     <header id="header-banner"></header>
-    <div id="animiertes-logo"><img src="./src/img/ndi_ag_logo_klein.png" alt="Logo New Digital intelligence"></div>
+    <div id="animiertes-logo"><img src="./src/img/ndi_ag_logo_klein.png" alt="Logo New Digital Intelligence"></div>
     <section id="leistungen-bereich">
         <div class="container">
             <div class="row">
@@ -193,21 +196,22 @@
     </footer>
 
     <script>
-        document.getElementById('language-switcher').addEventListener('click', function() {
-        var currentPath = window.location.pathname;
-        var newPath;
+    document.getElementById('language-switcher').addEventListener('click', function() {
+    var currentPath = window.location.pathname;
+    var newPath;
+    var baseUrl = '/test'; // Adjust this to match your actual base URL
 
-        if (currentPath.startsWith('/en/')) {
-        newPath = currentPath.replace('/en/', '/de/');
-        } else if (currentPath.startsWith('/de/')) {
-      newPath = currentPath.replace('/de/', '/en/');
-        } else {
-      // Default to English if the current language cannot be determined
-      newPath = '/en' + currentPath;
-        }
+    if (currentPath.startsWith(baseUrl + '/en/')) {
+    newPath = currentPath.replace(baseUrl + '/en/', baseUrl + '/de/');
+    } else if (currentPath.startsWith(baseUrl + '/de/')) {
+    newPath = currentPath.replace(baseUrl + '/de/', baseUrl + '/en/');
+    } else {
+    // Default to English if the current language cannot be determined
+    newPath = baseUrl + '/en' + currentPath;
+    }
 
-        window.location.pathname = newPath;
-        });
+    window.location.pathname = newPath;
+    });
     </script>
 
 

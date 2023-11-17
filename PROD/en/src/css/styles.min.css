@@ -197,6 +197,25 @@ section {
     font-weight: 400
 }
 
+#language-switcher {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    margin-top: .8rem;
+    display: block;
+    text-align: center;
+}
+
+#en-img{
+    height: 20px;
+    width: auto;
+    float: right;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+    margin-left: 5px;
+}
+
+
 #header-nav {
     width: 100%;
     height: 50px;
@@ -339,181 +358,14 @@ section {
     background-size: contain
 }
 
-#newsletter-bereich {
-    width: 100%;
-    background-color: var(--dunkel-grau);
-    padding-bottom: 0;
-    padding-top: 0
-}
-
-#nb-werbetext {
-    color: var(--weiss);
-    font-size: 1.2rem
-}
-
-#nb-form {
-    margin-top: .7rem;
-    width: 100%;
-    float: right;
-    text-align: right
-}
-
-#nb-email-input {
-    width: 78%;
-    height: 35px;
-    border: var(--border-style) var(--weiss);
-    padding: .4rem
-}
-
-#nb-btn {
-    height: 35px
-}
-
-@media (max-width: 1822px) {
-    #nb-email-input {
-        width: 70%
-    }
-}
-
-@media (max-width: 1358px) {
-    #nb-email-input {
-        width: 100%;
-        margin-bottom: .5rem
-    }
-
-    #nb-btn {
-        width: 100%
-    }
-}
-
-@media (max-width: 768px) {
-    #nb-werbetext {
-        display: none
-    }
-
-    #nb-form {
-        margin-top: 0
-    }
-
-    #newsletter-bereich .col-4 {
-        display: none
-    }
-}
-
-@media (max-width: 480px) {
-    #nb-email-input {
-        height: 25px
-    }
-
-    #nb-btn {
-        height: 25px;
-        padding: .1rem
-    }
-}
-
-@-webkit-keyframes logoAnimation {
-    0% {
-        transform: rotateZ(0)
-    }
-
-    11.111% {
-        transform: rotateZ(0)
-    }
-
-    22.222% {
-        transform: rotateZ(90deg)
-    }
-
-    33.333% {
-        transform: rotateZ(90deg)
-    }
-
-    44.444% {
-        transform: rotateZ(180deg)
-    }
-
-    55.555% {
-        transform: rotateZ(180deg)
-    }
-
-    66.666% {
-        transform: rotateZ(270deg)
-    }
-
-    77.777% {
-        transform: rotateZ(270deg)
-    }
-
-    88.888% {
-        transform: rotateZ(360deg)
-    }
-
-    100% {
-        transform: rotateZ(360deg)
-    }
-}
-
-@keyframes logoAnimation {
-    0% {
-        transform: rotateZ(0)
-    }
-
-    11.111% {
-        transform: rotateZ(0)
-    }
-
-    22.222% {
-        transform: rotateZ(90deg)
-    }
-
-    33.333% {
-        transform: rotateZ(90deg)
-    }
-
-    44.444% {
-        transform: rotateZ(180deg)
-    }
-
-    55.555% {
-        transform: rotateZ(180deg)
-    }
-
-    66.666% {
-        transform: rotateZ(270deg)
-    }
-
-    77.777% {
-        transform: rotateZ(270deg)
-    }
-
-    88.888% {
-        transform: rotateZ(360deg)
-    }
-
-    100% {
-        transform: rotateZ(360deg)
-    }
-}
-
-#animiertes-logo {
-    height: 150px;
-    width: 150px;
-    background-color: var(--hell-grau);
-    border-radius: 50%;
+#animiertes-logo>img {
+    display: block;
+    width: 200px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4rem;
     padding: 25px
-}
-
-#animiertes-logo>img {
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-animation: logoAnimation 5s ease-in-out infinite alternate;
-    animation: logoAnimation 5s ease-in-out infinite alternate
 }
 
 @media (max-width: 768px) {
