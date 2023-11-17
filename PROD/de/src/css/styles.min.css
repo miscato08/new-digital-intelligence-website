@@ -368,7 +368,7 @@ section {
     display: none
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1175px) {
     #desktop-nav {
         display: none
     }
