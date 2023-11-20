@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -18,16 +18,18 @@
 </head>
 
 <body>
-    <nav id="header-nav">
+       <nav id="header-nav">
         <div class="container" id="desktop-nav">
             <div class="row">
                 <div class="col-6"><a href="index.html" class="logo-link"><img src="./src/img/ndi_ag_logo_groß.png"
-                            alt="Logo von New Digital intelligence made simple"></a>
+                            alt="Logo von New Digital Intelligence"></a>
                     <ul>
-                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="index.html">Overview</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="imprint-contact.html">Imprint & Contact</a></li>
-                        <li class="active"><a href="team.html">Team Page</a></li>
+                        <li><a href="imprint-contact.html">Contact</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li class="active"><a href="team.html">Team</a></li>
                         <li>
                             <button id="language-switcher">
                                 <img src="./src/icons/icon-german.png" alt="English Flag" id="en-img"> DE
@@ -39,17 +41,18 @@
         </div>
         <div class="container" id="mobile-nav">
             <div class="row">
-                <div class="col-6"><a href="index.html" class="logo-link"><img src="./src/img/ndi_ag_logo_groß.png"
+                <div class="col-6"><a href="index.html" class="logo-link"><img src="./src/img/ndi_ag_logo_klein.png"
                             alt="Logo von new digital intelligence"></a>
                     <div class="clearfix" id="mobile-nav-dropdown">
                         <div id="mobile-nav-button"><span>&equiv;</span></div>
                         <div class="clearfix" id="mobile-nav-content">
                             <ul>
-                                <li><a href="index.html">Homepage</a></li>
-                                <li><a href="leistungen.html">Services</a></li>
+                                <li><a href="index.html">Overview</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="imprint-contact.html">Contact</a></li>
+                                <li><a href="technology.html">Technology</a></li>
+                                <li><a href="downloads.html">Downloads</a></li>
                                 <li class="active"><a href="team.html">Team</a></li>
-                                <li><a href="kontakt.html">Contact</a></li>
-                                <li><a href="impressum.html">Imprint</a></li>
                             </ul>
                         </div>
                     </div>
@@ -207,29 +210,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-6"><span>Consulting AG by Ferenc Burian and Michael Burian (2023)</span>
-                    <nav id="footer-nav"><a href="impressum.html">Imprint</a></nav>
+                    <nav id="footer-nav"><a href="impressum.html">Imprint & Contact</a></nav>
                 </div>
             </div>
         </div>
     </footer>
-
+    
     <script>
-    document.getElementById('language-switcher').addEventListener('click', function() {
-    var currentPath = window.location.pathname;
-    var newPath;
-    var baseUrl = '/test'; // Adjust this to match your actual base URL
+        document.getElementById('language-switcher').addEventListener('click', function() {
+        var currentPath = window.location.pathname;
+        var newPath;
+        var baseUrl = '/test'; // Adjust this to match your actual base URL
 
-    if (currentPath.startsWith(baseUrl + '/en/')) {
-    newPath = currentPath.replace(baseUrl + '/en/', baseUrl + '/de/');
-    } else if (currentPath.startsWith(baseUrl + '/de/')) {
-    newPath = currentPath.replace(baseUrl + '/de/', baseUrl + '/en/');
-    } else {
-    // Default to English if the current language cannot be determined
-    newPath = baseUrl + '/en' + currentPath;
-    }
+        if (currentPath.startsWith(baseUrl + '/en/')) {
+            newPath = currentPath.replace(baseUrl + '/en/', baseUrl + '/de/');
+        } else if (currentPath.startsWith(baseUrl + '/de/')) {
+            newPath = currentPath.replace(baseUrl + '/de/', baseUrl + '/en/');
+        } else {
+            // Default to English if the current language cannot be determined
+            newPath = baseUrl + '/en' + currentPath;
+        }
 
-    window.location.pathname = newPath;
-    });
+        window.location.pathname = newPath;
+        });
     </script>
 
 </body>
