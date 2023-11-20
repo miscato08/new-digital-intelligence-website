@@ -209,30 +209,30 @@
     <footer id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-6"><span>Consulting AG by Ferenc Burian and Michael Burian (2023)</span>
+                <div class="col-6"><span>Consulting AG by Michael Burian (2023)</span>
                     <nav id="footer-nav"><a href="imprint-contact.html">Impressum und Kontakt</a></nav>
                 </div>
             </div>
         </div>
     </footer>
 
-<script>
-    document.getElementById('language-switcher').addEventListener('click', function() {
-    var currentPath = window.location.pathname;
-    var newPath;
-    var baseUrl = '/test'; // Adjust this to match your actual base URL
+    <script>
+        document.getElementById('language-switcher').addEventListener('click', function() {
+        var currentPath = window.location.pathname;
+        var newPath;
+        var baseUrl = '/test'; // Adjust this to match your actual base URL
 
-    if (currentPath.startsWith(baseUrl + '/en/')) {
-    newPath = currentPath.replace(baseUrl + '/en/', baseUrl + '/de/');
-    } else if (currentPath.startsWith(baseUrl + '/de/')) {
-    newPath = currentPath.replace(baseUrl + '/de/', baseUrl + '/en/');
-    } else {
-    // Default to English if the current language cannot be determined
-    newPath = baseUrl + '/en' + currentPath;
-    }
+        if (currentPath.startsWith(baseUrl + '/en/')) {
+            newPath = currentPath.replace(baseUrl + '/en/', baseUrl + '/de/');
+        } else if (currentPath.startsWith(baseUrl + '/de/')) {
+            newPath = currentPath.replace(baseUrl + '/de/', baseUrl + '/en/');
+        } else {
+            // Default to English if the current language cannot be determined
+            newPath = baseUrl + '/en' + currentPath;
+        }
 
-    window.location.pathname = newPath;
-    });
+        window.location.pathname = newPath;
+        });
     </script>
     
 </body>

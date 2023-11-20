@@ -93,22 +93,22 @@
     </footer>
 
     <script>
-    document.getElementById('language-switcher').addEventListener('click', function() {
-    var currentPath = window.location.pathname;
-    var newPath;
-    var baseUrl = '/test'; // Adjust this to match your actual base URL
+        document.getElementById('language-switcher').addEventListener('click', function() {
+        var currentPath = window.location.pathname;
+        var newPath;
+        var baseUrl = '/test'; // Adjust this to match your actual base URL
 
-    if (currentPath.startsWith(baseUrl + '/en/')) {
-    newPath = currentPath.replace(baseUrl + '/en/', baseUrl + '/de/');
-    } else if (currentPath.startsWith(baseUrl + '/de/')) {
-    newPath = currentPath.replace(baseUrl + '/de/', baseUrl + '/en/');
-    } else {
-    // Default to English if the current language cannot be determined
-    newPath = baseUrl + '/en' + currentPath;
-    }
+        if (currentPath.startsWith(baseUrl + '/en/')) {
+            newPath = currentPath.replace(baseUrl + '/en/', baseUrl + '/de/');
+        } else if (currentPath.startsWith(baseUrl + '/de/')) {
+            newPath = currentPath.replace(baseUrl + '/de/', baseUrl + '/en/');
+        } else {
+            // Default to English if the current language cannot be determined
+            newPath = baseUrl + '/en' + currentPath;
+        }
 
-    window.location.pathname = newPath;
-    });
+        window.location.pathname = newPath;
+        });
     </script>
 
 </body>
